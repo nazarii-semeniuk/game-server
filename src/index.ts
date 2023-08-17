@@ -1,8 +1,9 @@
 import WebSocket, { WebSocketServer } from 'ws';
+import { WEBSOCKETS_PORT } from './config';
 
 import { PlayerInfo } from './types/PlayerInfo';
 
-const wss: WebSocketServer = new WebSocket.Server({ port: 9999 });
+const wss: WebSocketServer = new WebSocket.Server({ port: WEBSOCKETS_PORT });
 
 let playersOnline: PlayerInfo[] = [];
 
